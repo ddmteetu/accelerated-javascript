@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Dynamic Typing</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      var var1 = 5; // earlier variable was created with a type of 'number'
+      console.log(var1);
+      console.log(typeof var1);
+      var1 = '10'; // later it got assigned a value of type 'string' and it changed it's type to 'string'
+
+      console.log('--------');
+
+      console.log(var1);
+      console.log(typeof var1);
+
+      // OUTPUT:
+      // 5
+      // "number"
+      // "--------"
+      // "10"
+      // "string"
+    </script>
+  </body>
+</html>
