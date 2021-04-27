@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Working with Elements - Push, Pop, Shift and Unshift</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      var array = [1, 2, 3,4];
+
+      array.push(5);
+      console.log(array);
+      console.log(array.pop()); // item being removed from the end of the array is returned
+      console.log(array);
+      console.log(array.shift()); // item being removed from the start of the array is returned
+      console.log(array);
+      console.log(array.unshift('new')); // length of the array is returned
+      console.log(array);
+
+      // OUTPUT:
+      // [1, 2, 3, 4, 5]
+      // 5
+      // [1, 2, 3, 4]
+      // 1
+      // [2, 3, 4]
+      // 4
+      // ["new", 2, 3, 4]
+    </script>
+  </body>
+</html>
