@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Reducing Arrays</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      var array = [1, 2, 3, 4];
+
+      console.log(array.reduce(function(total, value) {
+        console.log('Total: ' + total + ', Value: ' + value);
+        return total + value;
+      }, 0));
+
+      console.log(array);
+
+      // OUTPUT:
+      // "Total: 0, Value: 1"
+      // "Total: 1, Value: 2"
+      // "Total: 3, Value: 3"
+      // "Total: 6, Value: 4"
+      // 10
+      // [1, 2, 3, 4]
+    </script>
+  </body>
+</html>
