@@ -33,6 +33,33 @@
       // "------"
       // "function"
       // "function"
+
+
+      // Functions - Arguments and returning Data
+      function calc() {
+        var stringVar = 'Inside function';
+        return stringVar;
+      }
+
+      function calculate(number1, number2) {
+        return number1 + number2;
+      }
+
+      var returned = calc();
+      var sum = calculate();
+      var sum2 = calculate(10, 8, 10);
+      var sum3 = calculate;
+
+      console.log(returned);
+      console.log(sum);
+      console.log(sum2);
+      console.log(sum3(15, 2));
+
+      // OUTPUT:
+      // "Inside function"
+      // NaN
+      // 18
+      // 17
     </script>
   </body>
 </html>
