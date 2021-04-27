@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Creating Objects with Create Method</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      var person = {
+        name: 'Vishvendra',
+        age: 32
+      };
+
+      // Object.create() expects 'prototype' that we want
+      // for the 'object' to be created to have, as a parameter
+      var anotherPerson = Object.create(null); // with null prototype
+      anotherPerson.name = 'Anna';
+
+      console.log(anotherPerson);
+
+      var person2 = Object.create(person); // passing 'person object' as a prototype
+      person2.name = 'Max';
+
+      console.log(person2);
+      console.log(person2.age);
+
+      // OUTPUT:
+      // [object Object] {
+      //   name: "Anna"
+      // }
+      // [object Object] {
+      //   age: 32,
+      //   name: "Max"
+      // }
+      // 32
+    </script>
+  </body>
+</html>
