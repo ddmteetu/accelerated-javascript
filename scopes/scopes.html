@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Global & Local Scopes</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      var test = 'Global scope'; // Global Scope
+
+      function localScope() {
+        var test = 'Local scope'; // Local Scope
+        console.log(test);
+      }
+
+      localScope(); // OUTPUT: "Local scope"
+      console.log(test); // OUTPUT: "Global scope"
+    </script>
+  </body>
+</html>
