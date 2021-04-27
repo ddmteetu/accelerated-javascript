@@ -109,6 +109,32 @@
       // 3
       // 0
       // 4
+
+
+      // Controlling loops with break and continue
+      for (var i = 0; i < 5; i++) {
+        if (i == 1) {
+          break;
+        }
+        console.log(i);
+      }
+
+      console.log('------');
+
+      for (var j = 0; j < 5; j++) {
+        if (j == 1) {
+          continue;
+        }
+        console.log(j);
+      }
+
+      // OUTPUT:
+      // 0
+      // "------"
+      // 0
+      // 2
+      // 3
+      // 4
     </script>
   </body>
 </html>
