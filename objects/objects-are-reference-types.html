@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Objects are Reference Types</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      var person = {
+        name: 'Vishvendra',
+        age: 32
+      };
+
+      var person1 = {
+        name: 'Vishvendra',
+        age: 32
+      };
+
+      var anotherPerson = new Object();
+      anotherPerson.name = 'Vishvendra';
+      anotherPerson.age = 32;
+      console.log(anotherPerson == person); // OUTPUT: false
+      console.log(person1 == person); // OUTPUT: false
+    </script>
+  </body>
+</html>
