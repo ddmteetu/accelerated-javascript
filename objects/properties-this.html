@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Properties & this</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      var age = 35;
+
+      var person = {
+        name: 'Vishvendra',
+        age: 32,
+        details: {
+          hobbies: ['Sports', 'Cooking'],
+          location: 'India'
+        },
+        greet: function() {
+          console.log('Hello, I am ' + this.age + ' years old');
+        }
+      };
+
+      person.name = 'Max';
+      console.log(person);
+      person.greet();
+
+      // OUTPUT:
+      // [object Object] {
+      //   age: 32,
+      //   details: [object Object] {
+      //     hobbies: ["Sports", "Cooking"],
+      //     location: "India"
+      //   },
+      //   greet: function() {
+      //     window.runnerWindow.proxyConsole.log('Hello, I am ' + this.age + ' years old');
+      //   },
+      //   name: "Max"
+      // }
+      // "Hello, I am 32 years old"
+    </script>
+  </body>
+</html>
