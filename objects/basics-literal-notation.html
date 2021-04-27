@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Object Basics & Literal Notation</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      var person = {
+        "first-name": 'Vishvendra',
+        age: 32,
+        details: {
+          hobbies: ['Sports', 'Cooking'],
+          location: 'India'
+        },
+        greet: function() {
+          console.log('Hello!!');
+        }
+      };
+
+      var field = 'age';
+
+      console.log(person['first-name']);
+      console.log(person[field]);
+      console.log(person.details.hobbies);
+      person.greet();
+      console.log(typeof person);
+      console.log(typeof person['first-name']);
+
+      // OUTPUT:
+      // "Vishvendra"
+      // 32
+      // ["Sports", "Cooking"]
+      // "Hello!!"
+      // "object"
+      // "string"
+    </script>
+  </body>
+</html>
