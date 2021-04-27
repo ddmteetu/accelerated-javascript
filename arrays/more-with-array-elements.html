@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Filtering, Mapping, Reversing Array Elements</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      var array = [1, 2, 3, 4];
+
+      array.unshift('new'); // length of the array is returned
+      array[array.indexOf('new')] = 'old';
+
+      console.log(array);
+
+      console.log(array.filter(function(value) {
+        return value > 2;
+      }));
+
+      console.log(array.map(function(value) {
+        return value * 2;
+      }));
+      console.log(array);
+      console.log(array.reverse());
+      console.log(array);
+
+      // OUTPUT:
+      // ["old", 1, 2, 3, 4]
+      // [3, 4]
+      // [NaN, 2, 4, 6, 8]
+      // ["old", 1, 2, 3, 4]
+      // [4, 3, 2, 1, "old"]
+      // [4, 3, 2, 1, "old"]
+    </script>
+  </body>
+</html>
