@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Reference Types</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      var array = [1, 2, 3];
+      var anotherArray = array;
+      console.log(array);
+      console.log(anotherArray);
+
+      array.push(4);
+      console.log('------');
+      console.log(array);
+      console.log(anotherArray);
+
+      array = ['a', 'b']; // a new object got created with a new address in the memory
+      console.log('-------');
+      console.log(array);
+      console.log(anotherArray);
+
+      // OUTPUT:
+      // [1, 2, 3]
+      // [1, 2, 3]
+      // "------"
+      // [1, 2, 3, 4]
+      // [1, 2, 3, 4]
+      // "-------"
+      // ["a", "b"]
+      // [1, 2, 3, 4]
+    </script>
+  </body>
+</html>
