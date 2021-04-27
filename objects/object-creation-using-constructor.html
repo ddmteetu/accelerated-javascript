@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Alternative way of creating objects - using the Object Constructor</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      var person = {
+        name: 'Vishvendra',
+        age: 32
+      };
+
+      var anotherPerson = new Object();
+      anotherPerson.name = 'Anna';
+      anotherPerson.age = 26;
+      console.log(anotherPerson);
+
+      // OUTPUT:
+      // [object Object] {
+      //   age: 26,
+      //   name: "Anna"
+      // }
+    </script>
+  </body>
+</html>
