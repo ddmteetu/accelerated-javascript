@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Prototypes Introduction</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      var person = {
+        name: 'Vishvendra',
+        age: 32
+      };
+
+      Object.prototype.greet = function() {
+        console.log('Hello there!');
+      };
+
+      console.log(person.toString()); // 'toString()' method is there on the Object's Prototype
+      person.greet(); // 'greet()' method was created on the Prototype
+      console.log(person.anything()); // there is no method named 'anything()' on Object nor on its Prototype
+
+      // OUTPUT:
+      // "[object Object]"
+      // "Hello there!"
+      // "error"
+      // "TypeError: person.anything is not a function
+      //     at null.js:12:45
+      //     at https://static.jsbin.com/js/prod/runner-4.1.8.min.js:1:13924
+      //     at https://static.jsbin.com/js/prod/runner-4.1.8.min.js:1:10866"
+    </script>
+  </body>
+</html>
