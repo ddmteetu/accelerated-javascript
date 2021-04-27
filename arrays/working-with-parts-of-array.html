@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Working with Parts of an Array - IndexOf, Splice and Slice</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      var array = [1, 2, 3, 4];
+
+      console.log(array); // OUTPUT: [1, 2, 3, 4]
+
+      array.unshift('new'); // length of the array is returned
+      console.log(array.indexOf('new')); // OUTPUT: 0
+      array[array.indexOf('new')] = 'old';
+
+      // var newArray = array.splice(3);
+
+      // console.log(array); // OUTPUT: ["old", 1, 2]
+      // console.log(newArray); // OUTPUT: [3, 4]
+
+      // var anotherArray = array.splice(2, 2);
+
+      // console.log(anotherArray); // OUTPUT: [2, 3]
+      // console.log(array); // OUTPUT: ["old", 1, 4]
+
+      var array2 = array.slice(2, 4); // the end index is excluded
+
+      console.log(array2); // OUTPUT: [2, 3]
+      console.log(array); // OUTPUT: ["old", 1, 2, 3, 4]
+    </script>
+  </body>
+</html>
