@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Difference between Concat and Join</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      var array = [1, 2, 3, 4];
+
+      array.unshift('new'); // length of the array is returned
+      array[array.indexOf('new')] = 'old';
+
+      var newArray = ['join', 'me'];
+
+      console.log(array.concat(newArray));
+      console.log(array);
+      console.log(newArray);
+      console.log(array.join(newArray));
+      console.log(array.join(', '));
+
+      // OUTPUT:
+      // ["old", 1, 2, 3, 4, "join", "me"]
+      // ["old", 1, 2, 3, 4]
+      // ["join", "me"]
+      // "oldjoin,me1join,me2join,me3join,me4"
+      // "old, 1, 2, 3, 4"
+    </script>
+  </body>
+</html>
