@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Functions - Creating and Calling Them</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      function calc() {
+        console.log("Inside function");
+      }
+
+      var anotherCalc = function () {
+        console.log("Inside another function");
+      };
+
+      var anotherFn = calc();
+
+      calc();
+      anotherCalc();
+      console.log(anotherFn);
+
+      console.log('------');
+
+      console.log(typeof calc);
+      console.log(typeof anotherCalc);
+
+      // OUTPUT:
+      // "Inside function"
+      // "Inside function"
+      // "Inside another function"
+      // undefined
+      // "------"
+      // "function"
+      // "function"
+    </script>
+  </body>
+</html>
