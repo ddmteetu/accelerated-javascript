@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Constructor Functions with Arguments</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      function Person(name, age) {
+        this.name = name;
+        this.age = age;
+      }
+
+      // 2 different objects based on the same blueprint, 'Person'
+      var vishvendra = new Person('Vishvendra', 32);
+      var anna = new Person('Anna', 26);
+
+      console.log(vishvendra);
+      console.log(anna);
+
+      // OUTPUT:
+      // [object Object] {
+      //   age: 32,
+      //   name: "Vishvendra"
+      // }
+      // [object Object] {
+      //   age: 26,
+      //   name: "Anna"
+      // }
+    </script>
+  </body>
+</html>
