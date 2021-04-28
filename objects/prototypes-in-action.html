@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Prototypes in Action</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      var person = {
+        name: 'Vishvendra',
+        age: 32
+      };
+
+      Object.prototype.greet = function() {
+        console.log('Hello there, I am ' + this.name + '!');
+      };
+
+      var vishvendra = Object.create(person);
+      var anna = Object.create(person);
+      // anna.name = 'Anna';
+
+      console.log(vishvendra.name);
+
+      vishvendra.greet();
+      anna.greet();
+
+      // OUTPUT:
+      // "Vishvendra"
+      // "Hello there, I am Vishvendra!"
+      // "Hello there, I am Vishvendra!"
+    </script>
+  </body>
+</html>
