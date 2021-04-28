@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Closures</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      function generator(input) {
+        var number = input;
+        return function() { // Closure
+          return number * 2;
+        };
+      }
+
+      var calc = generator(900);
+
+      // console.log(calc);
+      // OUTPUT:
+      // function() {
+      //   return number * 2;
+      // }
+      var calcAnother = generator(1000);
+      console.log(calc()); // OUTPUT: 1800
+    </script>
+  </body>
+</html>
