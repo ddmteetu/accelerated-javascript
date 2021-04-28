@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Handling errors with try and catch</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      try { // put the code to be tested for failure, in this block
+        test(); // function 'test' doesn't exist
+      } catch (error) { // block will get executed in case of an 'error'
+        console.log(error);
+      } finally { // block will always get executed, irrespective of 'error'
+        console.log('Finally!');
+      }
+
+      // OUTPUT:
+      // [object Error] { ... }
+      // "Finally!"
+    </script>
+  </body>
+</html>
