@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Built-in methods and properties</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      // function message(message) {
+      //   console.log(message);
+      //   // console.log(arguments[3]); // OUTPUT: undefined
+      //   // console.log(arguments.length); // OUTPUT: 2
+      //   console.log(arguments);
+      // }
+
+      // message('Hi!', 10);
+
+      // OUTPUT:
+      // "Hi!"
+      // [object Arguments] {
+      //   0: "Hi!",
+      //   1: 10
+      // }
+
+      // var msg = message;
+
+      // console.log(msg.name); // OUTPUT: "message"
+      // console.log(msg.length); // OUTPUT: 1 // Number of arguments function expects
+
+      // var anotherMsg = function (message) {
+      //   console.log(message);
+      // };
+
+      // console.log(anotherMsg.name); // OUTPUT: "anotherMsg"
+
+      function message(message) {
+        console.log(this.name); // 'this.name' doesn't work inside
+      }
+
+      message();
+    </script>
+  </body>
+</html>
