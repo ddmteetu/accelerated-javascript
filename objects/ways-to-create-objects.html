@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Different ways to create Objects</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      // 1st way of creating objects
+      // object creation using 'literal notation'
+      // 'Object.prototype' is the prototype of 'person'
+      var person = {
+        name: 'Vishvendra',
+        age: 32
+      };
+
+      // and this 'literal notation' is also using constructor function, 'Object'
+      console.log(person instanceof Object); // OUTPUT: true
+
+      // 2nd way of creating objects
+      // using the inbuilt 'Object' function
+      var person2 = new Object();
+      person.name = 'Vishvendra';
+      person.age = 32;
+
+      // 3rd way of creating objects
+      // using the 'Object.create()' method
+      // where you pass the 'prototype' as an argument
+      // for this case 'no prototype' is set yet
+      var person3 = Object.create(null);
+      person.name = 'Vishvendra';
+      person.age = 32;
+
+      // throws an error, as the default prototype, 'Object.prototype' is not the prototype
+      // where this 'toString()' method is set
+      console.log(person3.toString()); // throws error
+      console.log(person3 instanceof Object); // OUTPUT: false
+
+
+      // 4th way of creating objects
+      // using 'Constructor Functions'
+      function Person() {
+        this.name = 'Vishvendra';
+        this.age = 32;
+      }
+
+      var person4 = new Person();
+    </script>
+  </body>
+</html>
