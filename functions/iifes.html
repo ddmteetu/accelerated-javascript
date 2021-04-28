@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Immediately Invoked Function Executions (IIFEs)</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      // (function calc() {
+      //   console.log('Calc');
+      // })(); // OUTPUT: "Calc"
+
+      // IIFEs are useful to help prevent 'global' scope pollution
+      // variables are locally scoped and are not available outside
+      // so, global scope pollution is prevented
+      // (function calc() {
+      //   var number = 10;
+      //   console.log(number);
+      // })(); // OUTPUT: 10
+
+      // (function calc(input) {
+      //   var number = input;
+      //   console.log(number);
+      // })(10); // OUTPUT: 10
+
+      //console.log(number); // number is not defined error is thrown
+
+      var obj = {};
+      (function calc(input) {
+        obj.name = 'Vishvendra';
+      })(obj);
+
+      console.log(obj);
+
+      // OUTPUT:
+      // [object Object] {
+      //   name: "Vishvendra"
+      // }
+    </script>
+  </body>
+</html>
