@@ -28,6 +28,28 @@
       // "Vishvendra"
       // "Hello there, I am Vishvendra!"
       // "Hello there, I am Vishvendra!"
+
+
+      // More on Prototypes
+      var person = {
+        name: 'Vishvendra',
+        age: 32
+      };
+
+      Object.prototype.greet = function() {
+        console.log('Hello there, I am ' + this.name + '!');
+      };
+
+      var vishvendra = Object.create(person);
+      var anna = Object.create(person);
+
+      // don't use in production, not a safer way to check the prototype
+      console.log(anna.__proto__ == person); // OUTPUT: true
+
+      console.log(anna.__proto__.__proto__ == Object.prototype); // OUTPUT: true
+
+      // safer way to be used in production, to check the prototype
+      console.log(Object.getPrototypeOf(anna) == person); // OUTPUT: true
     </script>
   </body>
 </html>
