@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Timers & Intervals</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      // will wait for '2 seconds' and then logs
+      // setTimeout(function() {
+      //   console.log('Finished!');
+      // }, 2000);
+
+      // will keep running and logs
+      // every '500 mili seconds' and won't stop automatically
+      // setInterval(function() {
+      //   console.log('Ping!');
+      // }, 500);
+
+      var interval = setInterval(function() {
+        console.log('Ping!');
+      }, 500);
+
+      // clears the interval after '2500 mili seconds'
+      // and stops the 'interval' function from logging
+      setTimeout(function() {
+        clearInterval(interval);
+      }, 2500);
+    </script>
+  </body>
+</html>
