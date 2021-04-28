@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Handling 'this' with bind(), call() and apply()</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      function fn(message) {
+        console.log(message + this);
+      }
+
+      var obj = {
+        obfn: fn
+      };
+
+      var person = {
+        name: 'Vishvendra'
+      };
+
+      // passing arguments to the 'bind'
+      // we need to call the method explicitly
+      obj.obfn.bind(person, 'Hello')(); // OUTPUT: "Hello[object Object]"
+
+      // using the 'call' method to bind 'this' to another object
+      // the method gets called instantly
+      obj.obfn.call(person, 'Hello'); // OUTPUT: "Hello[object Object]"
+
+      // using the 'apply' method to bind 'this' to another object
+      // the method gets called instantly but the arguments are passed as elements of array
+      obj.obfn.apply(person, ['Hello']); // OUTPUT: "Hello[object Object]"
+    </script>
+  </body>
+</html>
