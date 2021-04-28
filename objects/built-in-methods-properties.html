@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Important build-in methods and properties</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      var person = {
+        name: 'Vishvendra',
+        age: 32,
+        greet: function() {
+          console.log('Hello');
+        }
+      };
+
+      // delete person.name; // to delete a 'property' of the object
+
+      // console.log(person.name); // OUTPUT: undefined
+
+      console.log('name' in person); // OUTPUT: true
+
+      console.log('Name' in person); // OUTPUT: false
+
+      // to get the fields in the object
+      // for (var field in person) {
+      //   console.log(field);
+      // }
+
+      // OUTPUT:
+      // "name"
+      // "age"
+      // "greet"
+
+      // to get the values of the fields in the object
+      for (var field in person) {
+        console.log(person[field]);
+      }
+
+      // OUTPUT:
+      // "Vishvendra"
+      // 32
+      // function() {
+      //   window.runnerWindow.proxyConsole.log('Hello');
+      // }
+    </script>
+  </body>
+</html>
