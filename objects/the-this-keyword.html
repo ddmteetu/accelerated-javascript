@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>The 'this' Keyword</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      function fn() {
+        console.log(this);
+      }
+
+      //fn(); // 'this' refers to the 'window object'
+
+      var obj = {
+        obfn: fn
+      };
+
+      var person = {
+        name: 'Vishvendra'
+      };
+
+      //obj.obfn(); // 'this' refers to the 'obj' object
+
+      //obj.obfn.bind(this)(); // 'this' refers to the 'window object'
+
+      obj.obfn.bind(person)(); // 'this' refers to the 'person' object, as we bind it to the 'person' object
+    </script>
+  </body>
+</html>
