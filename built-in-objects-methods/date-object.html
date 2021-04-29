@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>The Date Object</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      var today = new Date();
+      var otherDay = new Date(2021, 0, 26);
+
+      console.log(today.toString());
+      // OUTPUT:
+      // "Thu Apr 29 2021 09:42:12 GMT+0530 (India Standard Time)"
+
+      console.log(otherDay.toString());
+      // OUTPUT:
+      // "Mon Jan 26 2021 00:00:00 GMT+0530 (India Standard Time)"
+
+      var notAvailableDate = new Date(2020, 11, 35);
+
+      console.log(notAvailableDate.toString());
+      // OUTPUT:
+      // "Mon Jan 04 2021 00:00:00 GMT+0530 (India Standard Time)"
+
+      // var stringDate = new Date('2021/02/35'); // OUTPUT: "Invalid Date"
+      var stringDate = new Date('2021/02/25');
+
+      console.log(stringDate.toString());
+      // OUTPUT:
+      // "Thu Feb 25 2021 00:00:00 GMT+0530 (India Standard Time)"
+
+      console.log(Date.parse('2020/05/20')); // OUTPUT: 1589913000000 // miliseconds from 1st Jan, 1970
+
+      console.log(today.getDate()); // OUTPUT: 29
+
+      console.log(today.getDay()); // OUTPUT: 4
+    </script>
+  </body>
+</html>
