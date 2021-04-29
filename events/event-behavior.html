@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Event Behaviour</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      var innerDiv = document.querySelector('#inner');
+
+      var outerDiv = document.querySelector('#outer');
+
+      // Events propagates
+      innerDiv.addEventListner('click', innerListner);
+
+      outerDiv.addEventListner('click', outerListner);
+
+      function innerListner(event) {
+        console.log(event.buggles); // true or false - depending upon event bubbling
+        event.stopPropagation(); // stops event bubbling
+        console.log('Clicked inner!');
+      }
+
+      function outerListner(event) {
+        console.log('Clicked outer!');
+      }
+    </script>
+  </body>
+</html>
