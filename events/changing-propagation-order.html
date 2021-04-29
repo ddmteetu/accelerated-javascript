@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Changing Propagation Order</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      var innerDiv = document.querySelector('#inner');
+
+      var outerDiv = document.querySelector('#outer');
+
+      // Events propagates
+      innerDiv.addEventListner('click', innerListner);
+
+      outerDiv.addEventListner('click', outerListner, true); // changing propagation order to let the parent event occur first
+
+      function innerListner(event) {
+        console.log('Clicked inner!');
+      }
+
+      function outerListner(event) {
+        console.log('Clicked outer!');
+      }
+    </script>
+  </body>
+</html>
