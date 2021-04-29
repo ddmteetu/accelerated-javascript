@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Creating and Inserting Elements</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      var p = document.createElement('P');
+      p.textContent = 'A new paragraph!';
+      p.style.fontSize = '17px';
+      // console.log(p);
+
+      var li = document.querySelector('li');
+      var a = li.firstElementChild;
+
+      li.appendChild(p); // added inside of the element, as its last child
+      li.insertBefore(p, a); // inserted before a inside li
+    </script>
+  </body>
+</html>
