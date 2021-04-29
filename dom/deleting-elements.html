@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Deleting Elements</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      var a = document.querySelectorAll('a')[1];
+
+      a.parentElement.removeChild(a); // cross-browser way
+      a.remove(); // newer way
+    </script>
+  </body>
+</html>
