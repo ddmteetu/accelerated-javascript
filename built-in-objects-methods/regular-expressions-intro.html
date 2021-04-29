@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Intro to Regular Expressions</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      var string = 'abc';
+      var anotherString = 'ac';
+      var pattern = /ab/;
+      var anotherPattern = /ac/;
+
+      // console.log(pattern); // OUTPUT: [object RegExp] { ... }
+
+      console.log(pattern.exec(string)); // OUTPUT: ["ab"]
+      console.log(pattern.exec(anotherString)); // OUTPUT: null
+      console.log(anotherPattern.exec(string)); // OUTPUT: null
+      console.log(pattern.test(string)); // OUTPUT: true
+      console.log(string.match(pattern)); // OUTPUT: ["ab"]
+    </script>
+  </body>
+</html>
