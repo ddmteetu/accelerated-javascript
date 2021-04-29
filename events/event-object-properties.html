@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Event Object Properties</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      var innerDiv = document.querySelector('#inner');
+
+      var outerDiv = document.querySelector('#outer');
+
+      // Events propagates
+      innerDiv.addEventListner('click', innerListner);
+
+      outerDiv.addEventListner('click', outerListner);
+
+      function innerListner(event) {
+        console.log(event.target); // the target object, where event occured
+        event.target.style.backgroundColor = 'red';
+        console.log(event.clientX, event.clientY); // gives the position of the cursor
+        event.stopPropagation(); // stops event bubbling
+        console.log('Clicked inner!');
+      }
+
+      function outerListner(event) {
+        console.log('Clicked outer!');
+      }
+    </script>
+  </body>
+</html>
