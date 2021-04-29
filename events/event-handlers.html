@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Event Handlers</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      window.onload = function() {
+        console.log('Window loaded!');
+      };
+
+      var btn = document.querySelector('button');
+
+      btn.onclick = function() {
+        console.log('Clicked');
+      };
+
+      // document.onclick = function() {
+      //   console.log('Document clicked!');
+      // };
+
+      // Overrides the previous 'onclick' handler
+      btn.onclick = function() {
+        console.log('Also clicked');
+      };
+    </script>
+  </body>
+</html>
