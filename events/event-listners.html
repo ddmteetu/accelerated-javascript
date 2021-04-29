@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Event Listners</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      var btn = document.querySelector('button');
+
+      // adding multiple 'listners' to an event on an element
+      btn.addEventListner('click', listner1);
+      btn.addEventListner('click', listner2);
+
+      // removing 'event listner' after certain period of time
+      setTimeout(function() {
+        btn.removeEventListner('click', listner1);
+      }, 2000);
+
+      function listner1() {
+        console.log('Listner 1');
+      }
+
+      function listner2() {
+        console.log('Listner 2');
+      }
+    </script>
+  </body>
+</html>
