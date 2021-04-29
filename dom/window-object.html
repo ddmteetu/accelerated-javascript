@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>The Window Object</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      // console.log(window); // Outputs with 'window' object
+      console.log(window.innerWidth);
+      console.log(innerWidth);
+      console.log(outerWidth);
+      console.log(innerHeight);
+      console.log(outerHeight);
+
+      localStorage.setItem('key1', 1000);
+
+      console.log(localStorage.getItem('key1'));
+
+      sessionStorage.setItem('key2', 500);
+
+      console.log(sessionStorage.getItem('key2'));
+
+      // console.log(window.location); // the location object
+      // console.log(window.document); // the DOM
+      window.open('http://www.google.com'); // a popup tries to open with the provided URL
+    </script>
+  </body>
+</html>
