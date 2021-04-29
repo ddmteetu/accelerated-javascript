@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Elements and Nodes</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      var a = document.querySelectorAll('a')[1];
+
+      // 'Node' also includes 'non-HTML' elements
+      a.parentNode.removeChild(a); // cross-browser way
+    </script>
+  </body>
+</html>
